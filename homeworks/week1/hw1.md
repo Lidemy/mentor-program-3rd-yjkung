@@ -1,5 +1,6 @@
 ## 交作業流程
 
+<<<<<<< HEAD
 **開新分支**
 git branch -v
 git branch week1
@@ -20,3 +21,4 @@ git checkout master
 
 **刪除分支**
 git branch -d week1
+
