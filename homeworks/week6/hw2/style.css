@@ -1,0 +1,63 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:微軟正黑體;
+}
+
+.clap-border{
+	border:1px solid #03a87c;
+	width:60px;
+	height:60px;
+	border-radius: 50%;
+	text-align: center;
+
+	position: fixed;
+	margin-top: 85px;
+	margin-left: 30px;
+
+}
+.clap-content{
+	margin-top: 10px;
+}
+
+.clap-content:first-child{
+	font-weight: 600;
+}
+
+.wrapper{
+	max-width: 900px;
+	margin:50px auto;
+}
+
+.title{
+	font-size: 42px;
+	font-weight: 600;
+	color:#212f3c;
+	margin-bottom: 30px;
+}
+
+.title~p{
+	font-size: 20px;
+	font-weight: 600;
+	padding-top: 15px;
+	color:#212f3c;
+}
+
+@media screen and (max-width: 1100px){
+	.clap-border{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 960px){
+	.title{
+		font-size: 30px;
+	}
+	.title~p{
+		font-size: 16px;
+	}
+	.wrapper{
+		max-width: 90%;
+		margin:0 auto;
+	}
+}
