@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>week7 hw2</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="background">
+		<div class="img"></div>
+		<div class="whatname">
+				<!--表單開始 -->
+			<div class="form">
+				<div class="wrapper">
+				  <div class="start">
+					  <h2>程式導師實驗計畫第三期報名表單</h2>
+					  <div>詳情請參考：
+						  <a href="https://medium.com/hulis-blog/mentor-program-3rd-47a2e85e33b3">https://medium.com/hulis-blog/mentor-program-3rd-47a2e85e33b3</a><br>
+	            <span>填完之後請務必按照文章內的說明再寄信給我，才算報名成功喔</span><br>
+	            <span>*必填</span>
+	          </div>
+	        </div>
+
+	        <div class="question__box">
+	        	<h5 class="title" class="title">電子郵件地址</h5><span class="required">*</span>
+	        	<form><input class="necessary" type="text" name="input__field" placeholder="你的電子郵件"/></form>
+	        </div>
+
+	        <div class="question__box">
+	        	<h5 class="title">暱稱</h5><span class="required">*</span>
+	        	<div class="description"><span>該如何稱呼你</span></div>
+	        	<form><input class="necessary" type="text" name="input__field" placeholder="你的回答"/></form>
+	        </div>
+
+	        <div class="apply__type">
+	        	<h5 class="title">報名類型</h5><span class="required">*</span><br>
+	        	<label><input name="rookie" data-value="從零到一基礎班" type="radio"/>從零到一基礎班（兩個月後開始收保證金 5000，淘汰不退還，結業後兩個月內找到工作付一個月半薪水，沒工作不用付）</label><br>
+	        	<label><input name="frontend" data-value="工程師加強班" type="radio"/>在職工程師加強班（兩個月後開始收保證金 5000，三個月時收學費 35000 元台幣，被淘汰不退還）</label>
+	        </div>
+
+	        <div class="question__box">
+	        	<h5 class="title">現在的職業</h5><span class="required">*</span>
+	        	<div class="description"><span>範例：學生、前端工程師、待業中、業務</span></div>
+	        	<form ><input class="necessary" type="text" name="input__field" placeholder="你的回答"/></form>
+	        </div>
+
+	        <div class="question__box">
+	        	<h5 class="title">怎麼知道這個計畫的？</h5><span class="required">*</span>
+	        	<form><input class="necessary" type="text" name="input__field" placeholder="你的回答"/></form>
+	        </div>
+
+	        <div class="question__box">
+	        	<h5 class="title">是否有程式相關背景？</h5><span class="required">*</span>
+	        	<form><input class="necessary" type="text" name="input__field" placeholder="你的回答"/></form>
+	        </div>
+
+	        <div class="question__box">
+	        	<h5 class="title">其他</h5>
+	        	<div class="description"><span>任何你想說的</span></div>
+	        	<input type="text" name="input__field" placeholder="你的回答"/>
+	        </div>
+
+        <form action="">
+        <input type="submit">
+        </form>
+        <div class="remind">請勿利用 Google 表單送出密碼。</div>
+    </div>
+		  </div>
+	  </div>
+			  <!--表單結束 -->
+		<div class="footer">
+			<span>Google 並未認可或建立這項內容。 檢舉濫用情形 - 服務條款</span>
+		  <img src="googlelogo_dark_clr_74x24px.svg" alt=""><span class="img__text">表單</span>
+		</div>
+	</div>
+
+	<script>
+    const questionBox = document.querySelectorAll('.question__box');
+    const submit = document.querySelector('input[type=submit]');
+    const inputField = document.querySelectorAll('.necessary');
+    submit.addEventListener('click',function(e) {
+      // 輸入框驗證
+      for (i = 0; i < inputField.length; i += 1){
+        if (inputField[i].value == '') {
+          e.preventDefault();
+          //修改樣式
+          questionBox[i].classList.add('verification');
+          inputField[i].style['border-bottom-color'] = '#d93025';
+          const remindWord = document.createElement('span');
+          remindWord.innerText = '這是必填項目';
+          remindWord.style.color = '#d93025';
+          questionBox[i].appendChild(remindWord);
+        }
+      }
+        //radio驗證
+      const radio = document.querySelector('.apply__type');
+      const rookie = document.querySelector('input[name=rookie]');
+      const frontend = document.querySelector('input[name=frontend]');
+      if(rookie.checked == false && frontend.checked == false) {
+        e.preventDefault();
+        //修改樣式
+        radio.classList.add('verification');
+        radio.style.borderBottomColor='#d93025';
+        const remindWord = document.createElement('span');
+        remindWord.innerHTML = '<br>這是必填項目';
+        remindWord.style.color='#d93025';
+        radio.appendChild(remindWord);
+      }
+
+      let s = document.querySelector('input[type=radio]:checked');
+
+      let seccess = false;
+      for (i = 0; i < inputField.length; i += 1) {
+        if (inputField[i].value !== '' && (rookie.checked == true || frontend.checked == true)) {
+          seccess = true;
+        } 
+      }
+      if (seccess) {
+        console.log(`emeil:${inputField[0].value}\nnickname:${inputField[1].value}\n報名類型:${s.name}\n怎麼知道這個計畫的？:${inputField[2].value}\n是否有程式相關背景:${inputField[3].value}`);
+        alert('送出成功');
+      }
+    })
+
+  </script>
+
+</body>
+</html>
