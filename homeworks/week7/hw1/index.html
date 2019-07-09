@@ -3,51 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>week7 hw1</title>
-  <style>
-    html,body{
-      height:100%;
-      margin: 0px;
-      padding:0px;
-    }
-    *{
-      font-family: 微軟正黑體,sans-serif;
-      position: relative;
-    }
-    .canvas{
-      height:100%;
-    }
-    .wrapper{
-      width:300px;
-      position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      text-align: center;
-    }
-
-    span{
-      font-size: 26px;
-      font-weight: bold;
-    }
-
-    .start{
-      display: block;
-      margin: 0px auto;
-      margin-top: 10px;
-    }
-
-    .colorChange{
-      background-color: DarkSeaGreen;
-    }
-
-    .again{
-      display: block;
-        margin: 0px auto;
-      margin-top: 10px;
-    }
-
-
-  </style>
+  <script src="hw1.js" defer></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!--   
@@ -64,54 +21,10 @@
      <div class="wrapper">     
        <span>畫面變色時請點擊</span><br>
        <button class="start">開始</button>
+       <button class="again">再試一次</button>
      </div>
    </div>
 
-   <script>
-    const start = document.querySelector('.start');
-    const canvas = document.querySelector('.canvas');
-    let changeTime = (Math.random() * 3)*1000;
-
-    const changeColor = function() {
-       document.querySelector('.canvas').classList.add('colorChange');
-    }
-    
-    let time = 0;
-    function timeCounting() {
-      time += 0.1;
-    }
-
-    //按下開始按鈕
-    start.addEventListener('click',function(e) {
-        start.style.display = 'none';
-        setTimeout('changeColor()',changeTime);
-        setInterval(timeCounting, 100);
-    })
-        
-    const wrapper = document.querySelector('.wrapper');
-    const again = document.createElement('button');
-    let shift = false;
-    if (shift == false) {
-      canvas.addEventListener('click', function(e) {
-        if(e.target.classList.contains('colorChange') && shift == false) {
-        shift = true;
-          let changeTimeinSec = changeTime/1000;
-          alert(`你花費了${(time-changeTimeinSec).toFixed(2)}秒`); //計時 - 變色預備時間 = 花費時間
-
-        //出現再玩一次按鈕
-          canvas.classList.contains('again') ;
-          again.innerText = '再玩一次';
-          again.classList.add('.again');
-          wrapper.appendChild(again);
-        }
-      })
-    }
-      // 點擊再玩一次按鈕 => 重新整理
-      again.addEventListener('click', function(e) {
-        history.go(0);
-      })
-
-
-   </script>
+  
 </body>
 </html>
