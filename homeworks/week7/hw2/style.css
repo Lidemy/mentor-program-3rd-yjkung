@@ -1,0 +1,169 @@
+		*{
+			font-family: 微軟正黑體,sans-serif;
+			margin:0;
+			padding: 0;	
+		}
+
+		body,html{
+			height: 100%;
+			background-color: #f6ebe7;
+			text-align: center;
+		}
+		.img{
+			background-image:url(04_thanksgiving_leaves.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 278px;
+		}
+
+    .whatname{
+    	display: flex;
+			justify-content: center;
+    }
+  
+		.form{
+			background-color: white;
+			border-top:8px solid rgb(255, 137, 75);
+			width:640px;
+			margin-top: -100px;
+			text-align: left;
+			box-shadow:0 1px 4px 0 rgba(0,0,0,0.37)	
+		}
+		.wrapper{
+			margin:0 30px;
+			padding-bottom: 20px;
+		}
+
+		.start{
+			margin-bottom: 20px;
+		}
+
+
+		.question__box,.apply__type{
+			margin:5px 15px;
+			padding:8px 15px;
+			/*border:1px solid black;*/
+		}
+		.apply__type input{
+			width:auto;
+			display: inline-block;
+			margin:0;
+			margin-top:20px;
+			margin-right: 10px;
+		}
+
+		input{
+			display: block;
+			border:none;
+			border-bottom:1px solid #cecaca; 
+			width:50%;
+			margin:30px 0;
+			padding-bottom: 5px;
+			background-color: transparent;	
+		}
+
+		input::-webkit-input-placeholder{
+			font-size: 16px;
+			color:#bcb8b8;
+			border:none;
+		}
+		input:focus{
+			outline:none
+		}
+
+		h2{
+			font-size: 36px;
+			font-weight: 500;
+			margin-top: 30px;
+			margin-bottom:20px;
+			display:flex;
+			letter-spacing: -3px;
+			justify-content: flex-start;
+		}
+
+		.title{
+			font-size: 20px;
+			font-weight: 600;
+			display: inline-block;
+		}
+
+		.required{
+			color:red;
+			font-size: 18px;
+			font-family: Roboto;
+			margin-left:5px;
+		}
+
+		h2+div,.description{
+			font-size: 14px;
+		}
+
+		div a,.start span{
+			display: inline-block;
+			margin-top: 10px;
+			font-size: 14px;
+		}
+
+		.start span~span{
+			color:red;
+			margin-top: 20px;
+		}
+
+		input[type=submit]{
+			background-color: #1a73e8;
+			border:none;
+			width: 88px;
+			line-height: 20px;
+			padding:10px;
+			border-radius: 5px;
+			color:white;
+			font-size: 0.8em;
+			margin:10px 25px;
+			cursor:pointer;
+		}
+
+		.remind{
+			font-size: 10px;
+			color: rgba(0,0,0,0.54);
+			margin:25px 25px;
+		}
+
+		.footer{
+			margin-bottom: 20px;
+		}
+
+		.footer span:first-child{
+			color:rgba(0, 0, 0, 0.66);
+			font-size: 12px;
+			margin-top: 30px;
+			margin-bottom: 20px;
+			display: block;
+		}
+
+		div img{
+			opacity: 0.26;
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		.img__text{
+			font-size: 22px;
+			color:black;
+			opacity: .26;
+			font-weight: bold;
+			padding-top: 10px;
+		}
+
+
+   /* 必填未填格式*/
+		.verification{
+			background-color: rgb(255, 214, 214);
+		}
+
+		.verification::-webkit-input-placeholder{
+			background-color: rgb(255, 214, 214);
+		}
+
+		.border__bottom:{
+			border-bottom:1.5px solid #d93025;
+		}
