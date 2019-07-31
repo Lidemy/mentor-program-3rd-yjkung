@@ -1,0 +1,59 @@
+*{
+	font-family: 微軟正黑體,sans-serif;
+  margin:0;
+  padding:0;
+}
+
+body,html{
+  background-color: #E0E3DA;
+}
+
+.wrapper{
+	width:80%;
+	margin:20px auto;
+	text-align: center;
+}
+
+h1{
+  color:#A593E0;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.message__box{
+  width:360px;
+	margin:0 auto;
+}
+
+.mymessage{
+  width:360px;
+  height: 80px;
+	display: inline-block;
+	box-sizing: border-box;
+	margin-top:30px;
+	padding:5px;
+	color:#566270;
+	resize: none;
+}
+
+.submit{
+	margin-top: 5px;
+	padding: 5px 20px;
+	border:none;
+	background-color: #A593E0;
+	color:#FFFFF3;
+	font-weight: bold;
+}
+
+.message{
+	box-sizing: border-box;
+	background-color: #FFFFF3;
+	color:#566270;
+	width:360px;
+	margin:0 auto;
+	margin-bottom:10px;
+	padding:5px;
+  min-height: 50px;
+	text-align: left;
+}

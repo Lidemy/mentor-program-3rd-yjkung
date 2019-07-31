@@ -1,0 +1,78 @@
+*{
+	padding: 0;
+	margin:0;
+	font-family: 微軟正黑體,sans-serif;
+}
+
+body,html{
+	height: 100%;
+}
+
+h1{
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+button{
+  background-color:#F6B352;
+  color:white;
+  border:none;
+  width:90px;
+  height: 35px;
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.wrapper{
+  display: flex;
+  height: 100%;
+}
+
+.name{
+  text-align: center;
+  justify-content: center;
+  margin:40px auto;
+}
+
+.prize__title{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.first__img{
+	width:450px;
+	height: 250px;
+  background-size:cover;
+  background-image: url(images/plane.jpg);
+}
+
+.first__background{
+	background-color: #d6ecfa;
+}
+
+.second__img{
+  width:450px;
+	height: 250px;
+  background-size:cover;
+  background-image: url(images/TV.jpg);
+}
+
+.third__img{
+  width:450px;
+	height: 250px;
+  background-size:cover;
+  background-image: url(images/youtube.jpg);
+}
+
+.none__background{
+	background-color: #333;
+}
+
+.none__title{
+	color: white;
+}
+
+.noshow{
+	display: none;
+}

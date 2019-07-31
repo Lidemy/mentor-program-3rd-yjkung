@@ -1,0 +1,59 @@
+*{
+	font-family: 微軟正黑體,sans-serif;
+	padding:0;
+	margin:0;
+}
+
+body,html{
+	height: 100%;
+	background-image: url(background.jpg);
+	background-size: cover;
+}
+
+.wrapper{
+	width:90%;
+	margin:0 auto;
+	text-align: center;
+}
+
+.gamebox{
+	padding: 20px;
+	width: 28%;
+	display: inline-block;
+	text-align: left;
+}
+
+.img{
+	width:250px;
+	height:150px;
+	background-size: cover;
+	display: block;
+	margin:0 20px;
+	border:1px solid;
+	color:white;
+	margin-bottom: 10px;
+}
+
+.logo{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	background-size: cover;
+	display: inline-block;
+	margin-left: 25px;
+}
+
+.content{
+	display: inline-block;
+	margin-left: 25px;
+	width:40%;
+	overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  color:white;
+}
+
+.title{
+	font-size: 14px;
+}
+
