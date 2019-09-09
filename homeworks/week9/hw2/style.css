@@ -1,0 +1,127 @@
+* {
+    font-family: 微軟正黑體, sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.message__board {
+    width: 80%;
+}
+
+.message {
+    background-color: #FDD692;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.board__name {
+    font-weight: bold;
+}
+
+.board__content {
+    padding: 1px 0;
+}
+
+.post__time {
+    font-size: 0.5em;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+input[type="submit"] {
+    padding: 5px 20px;
+    background-color: #754F44;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+h1 {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+h1 a {
+    color: #754F44;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.warn {
+    font-size: 14px;
+    color: gray;
+}
+
+
+/* Login */
+
+.login__box,
+.logout__box {
+    width: 500px;
+    margin: 80px auto;
+    background-color: #FBFFB9;
+    color: #754F44;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.login__box form {
+    margin: 0 auto;
+    width: 250px;
+}
+
+.logout__box form {
+    margin: 0;
+    width: 70px;
+    display: inline-block;
+}
+
+.login__box input {
+    margin: 10px;
+}
+
+.login__box a {
+    color: #EC7357;
+}
+
+.logout__conn,
+.signup__conn {
+    padding: 5px 20px;
+    background-color: #F6B352;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.logout__conn a,
+.signup__conn a {
+    color: white;
+    text-decoration: none;
+}
+
+.stop__logout {
+    padding: 5px 20px;
+    background-color: #754F44;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.stop__logout a {
+    color: white;
+    text-decoration: none;
+}
